@@ -26,6 +26,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <net.sf.opencsv.version>2.3</net.sf.opencsv.version>
+        <my_variable>23</my_variable>
     </properties>
 
     <dependencies>
@@ -38,6 +39,26 @@
 
     <build>
         <finalName>L1.1</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.3</version>
+                <executions>
+                    <execution>
+                        <id>assembly-dsadsafdsa</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

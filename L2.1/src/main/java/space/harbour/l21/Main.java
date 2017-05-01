@@ -5,20 +5,26 @@ import java.lang.management.ManagementFactory;
 /**
  * Created by tully.
  * <p>
- * VM options: -Xmx512m -Xms512m
+ * VM options: -Xmx64m -Xms64m
  */
 
 public class Main {
     public static void main(String... args) throws InterruptedException {
         System.out.println("pid: " + ManagementFactory.getRuntimeMXBean().getName());
 
-        //each class in Java extends Object
-        //for each runtime object has special object with class java.lang.Class
-        //object of java.lang.Class contains information about the object
+        // autoboxing and unboxing
+        // each class in Java extends Object
+        // overloading of hashCode and equals
+        // equals vs ==
+        // int[] is an object
 
-        //how to monitor heap memory in jconsole?
-        //array of strings with string pool and without it
-        
+        // each runtime object has a special object of the class java.lang.Class
+        // object of java.lang.Class contains information about the object
+
+        // * how to monitor heap memory in jconsole?
+        // * strings with string pool and without it
+
+
         infiniteLoop();
     }
 
