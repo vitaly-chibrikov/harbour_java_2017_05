@@ -1,5 +1,7 @@
 package space.harbour.l31.collections;
 
+import org.apache.commons.collections4.CollectionUtils;
+
 import java.util.Collection;
 import java.util.TreeSet;
 
@@ -25,6 +27,7 @@ public class Main {
         for (int i = min; i < max + 1; i++) {
             example.add(i);
         }
+
 
         calcTime(() -> example.contains(max));
     }

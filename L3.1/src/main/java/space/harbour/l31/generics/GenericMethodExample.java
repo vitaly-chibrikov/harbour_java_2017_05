@@ -15,6 +15,7 @@ public class GenericMethodExample {
         List<Integer> listOfInts = new ArrayList<>();
         listOfInts.add(0);
         Integer intValue = getTheFirst(listOfInts);
+
         List<String> listOfStrings = new ArrayList<>();
         listOfStrings.add("Java is the best!");
         String stringValue = getTheFirst(listOfStrings);

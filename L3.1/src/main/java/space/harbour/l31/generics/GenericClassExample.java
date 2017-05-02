@@ -24,7 +24,7 @@ public class GenericClassExample<T> {
         GenericClassExample<Integer> intObject = new GenericClassExample<>(1);
         Integer valueInteger = intObject.getT();
 
-        //GenericClassExample<String> stringObject = new GenericClassExample<>("word");
-        //String valueString = stringObject.getT();
+        GenericClassExample<String> stringObject = new GenericClassExample<>("word");
+        String valueString = stringObject.getT();
     }
 }
