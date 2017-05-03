@@ -24,6 +24,10 @@ public class LowerBoundExample {
     private void doSomething(List<? super Number> list) {
         list.add(1);
 
+        Object n = list.get(0);
+        if (n instanceof Number) {
+
+        }
         //for (Number number : list) {} // error
     }
 }

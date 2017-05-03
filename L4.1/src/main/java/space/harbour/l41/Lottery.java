@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 class Lottery {
     private final Supplier<List<String>> emailsSource;
     private final LotteryMachine machine;
-    private final  String seedString;
+    private final String seedString;
 
     Lottery(Supplier<List<String>> emailsSource, LotteryMachine machine, String seedString) {
         this.emailsSource = emailsSource;
@@ -17,14 +17,11 @@ class Lottery {
         this.seedString = seedString;
     }
 
-    void run() {
+    List<String> run() {
         List<String> emails = emailsSource.get();
 
         System.out.println("Emails count: " + emails.size());
 
-        List<String> winners = machine.setSeed(seedString).draw(emails);
-
-        System.out.println("Winners:");
-        winners.forEach(System.out::println);
+        return machine.setSeed(seedString).draw(emails);
     }
 }

@@ -16,6 +16,11 @@ import static org.mockito.Mockito.*;
 public class LotteryTest {
 
     @Test
+    public void winnersTest() {
+        //todo: add winners test
+    }
+
+    @Test
     public void mockedLottery() {
         EmailsReader emailsReader = mock(EmailsReader.class);
         LotteryMachine lotteryMachine = mock(LotteryMachine.class);

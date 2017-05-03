@@ -1,6 +1,7 @@
 package space.harbour.l41;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by tully.
@@ -18,9 +19,13 @@ public class Main {
 
         String seedString = "May the Force be with you";
 
-        new Lottery(
+        List<String> winners = new Lottery(
                 new EmailsReader(pathToFile),
                 new LotteryMachine(MAX_WINNERS_COUNT),
-                seedString).run();
+                seedString
+        ).run();
+
+        System.out.println("Winners:");
+        winners.forEach(System.out::println);
     }
 }

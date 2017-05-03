@@ -2,8 +2,7 @@ package space.harbour.l31.collections;
 
 import org.apache.commons.collections4.CollectionUtils;
 
-import java.util.Collection;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by tully.
@@ -17,11 +16,11 @@ import java.util.TreeSet;
 // CollectionUtils
 
 public class Main {
-    private static final int MEASURE_COUNT = 100;
+    private static final int MEASURE_COUNT = 1;
 
     @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     public static void main(String... args) {
-        Collection<Integer> example = new TreeSet<>();
+        Collection<Integer> example = new LinkedList<>();
         int min = 0;
         int max = 9_999_999;
         for (int i = min; i < max + 1; i++) {

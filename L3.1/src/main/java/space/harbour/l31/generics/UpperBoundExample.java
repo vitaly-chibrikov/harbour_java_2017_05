@@ -18,9 +18,11 @@ public class UpperBoundExample<T extends Number> {
         //list = new ArrayList<Character>();
         //list = new ArrayList<String>();
         //list = new ArrayList<Object>();
+
+        doSomething(list);
     }
 
-    private void doSomething(List<? extends Number> list) {
+    private static void doSomething(List<? extends Number> list) {
         //list.add(1);// error
 
         double sum = 0;
