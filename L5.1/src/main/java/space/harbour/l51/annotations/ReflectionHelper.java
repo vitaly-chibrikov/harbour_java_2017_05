@@ -1,4 +1,4 @@
-package ru.otus.l51;
+package space.harbour.l51.annotations;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

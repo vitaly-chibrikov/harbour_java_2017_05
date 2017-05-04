@@ -40,7 +40,12 @@ public class LotteryMachineTest {
 
     @Test
     public void oneEmail() {
-        assertEquals(1, lotteryMachine.draw(Collections.singletonList("test")).size());
+        LotteryMachine lotteryMachine = new LotteryMachine(5);
+
+        List<String> emails = Collections.singletonList("test");
+        List<String> results = lotteryMachine.draw(emails);
+
+        assertEquals(1, results.size());
     }
 
     @Test
@@ -67,9 +72,9 @@ public class LotteryMachineTest {
         Assert.assertTrue(result.contains("9"));
     }
 
-    @Ignore
+    //@Ignore
     @Test(timeout = 100)
-    public void tenEmailsSeed100500() {
+    public void tenEmailsSeed100500() throws InterruptedException {
         List<String> result = lotteryMachine.setSeed(100500)
                 .draw(Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
         Assert.assertEquals(5, result.size());

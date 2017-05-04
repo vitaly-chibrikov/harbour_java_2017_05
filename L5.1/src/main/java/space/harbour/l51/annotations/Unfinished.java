@@ -1,4 +1,4 @@
-package ru.otus.l51.annotations;
+package space.harbour.l51.annotations;
 
 
 import java.lang.annotation.Documented;
