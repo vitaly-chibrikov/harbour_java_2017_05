@@ -12,6 +12,7 @@ public class Main {
         Logger logger20 = new FileLogger();
         Logger logger30 = new DBLogger();
 
+        //creation of chain
         logger.setNext(logger20);
         logger20.setNext(logger30);
 
