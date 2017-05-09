@@ -13,8 +13,9 @@ public class ResourcePoolFactory implements ResourceFactory {
     public Resource get() {
         if (pool.isEmpty()) {
             return new PoolResource();
+        }else {
+            return pool.poll();
         }
-        return pool.poll();
     }
 
 

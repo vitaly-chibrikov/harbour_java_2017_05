@@ -29,6 +29,12 @@ public class Subject {
         observers.remove(observer);
     }
 
+    /**
+     * Send notifications
+     *
+     * @param event
+     */
+
     public void notify(Event event) {
         observers.forEach(observer -> observer.notify(event));
     }

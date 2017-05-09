@@ -6,12 +6,12 @@ package space.harbour.l71.creational.bilder;
  * Builder in the Builder pattern.
  */
 public class BookInfoBuilderImpl implements BookInfoBuilder{
-    private final int defaulEdition = 0;
+    private final int defaultEdition = 0;
     private final int defaultIndex = 1;
 
     private String author;
     private String name;
-    private int edition = defaulEdition;
+    private int edition = defaultEdition;
     private int index = defaultIndex;
 
     public BookInfoBuilderImpl setAuthor(String author) {

@@ -11,6 +11,7 @@ public class Plane implements Aircraft {
 
     private AirportControl control;
     private Set<Integer> dangerous = new HashSet<>();
+
     private int selfSector;
 
     public Plane(String name, int selfSector) {
