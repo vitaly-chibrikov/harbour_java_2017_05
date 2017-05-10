@@ -7,7 +7,6 @@ import java.io.Serializable;
  */
 public class Student extends Person{
 
-
     private final String course;
 
     public Student(int age, String name, String course) {
