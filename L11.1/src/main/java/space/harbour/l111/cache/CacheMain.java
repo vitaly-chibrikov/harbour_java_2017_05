@@ -7,7 +7,7 @@ public class CacheMain {
 
 
     public static void main(String[] args) throws InterruptedException {
-        // new MongoMain().eternalCacheExample();
+        //new CacheMain().eternalCacheExample();
         new CacheMain().lifeCacheExample();
     }
 

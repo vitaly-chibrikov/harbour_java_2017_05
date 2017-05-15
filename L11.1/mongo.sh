@@ -10,3 +10,6 @@ sudo apt-get install mongodb-org
 
 systemctl start mongod
 systemctl enable mongod
+
+mongo -version
+netstat -plntu | grep 27017

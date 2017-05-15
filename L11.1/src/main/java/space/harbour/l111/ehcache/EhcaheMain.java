@@ -19,14 +19,14 @@ public class EhcaheMain {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        org.apache.log4j.BasicConfigurator.configure();
+        //org.apache.log4j.BasicConfigurator.configure();
         new EhcaheMain(CacheManager.getInstance()).run();
     }
 
     private void run() throws InterruptedException {
-        cacheNamesExample();
-        evictedExample();
-        lifeExample();
+        //cacheNamesExample();
+        //evictedExample();
+        //lifeExample();
         idleExample();
     }
 

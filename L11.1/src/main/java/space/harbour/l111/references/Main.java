@@ -15,8 +15,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        weak();
-        soft();
+        //weak();
+        //soft();
         phantom();
     }
 
@@ -40,17 +40,17 @@ public class Main {
 
     private static void soft() {
         int size = 1000;
-        List<SoftReference<BigObject>> weakReferences = new ArrayList<>(size);
+        List<SoftReference<BigObject>> references = new ArrayList<>(size);
 
         for (int k = 0; k < size; k++) {
-            weakReferences.add(new SoftReference<>(new BigObject()));
+            references.add(new SoftReference<>(new BigObject()));
         }
 
-        //System.gc();
+        System.gc();
 
         int sum = 0;
         for (int k = 0; k < size; k++) {
-            if (weakReferences.get(k).get() != null) sum++;
+            if (references.get(k).get() != null) sum++;
         }
 
         System.out.println("Soft references: " + sum);
