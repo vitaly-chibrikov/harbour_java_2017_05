@@ -20,12 +20,14 @@ public class FrontendServlet extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {
         login = request.getParameter("login");
+
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
 
         Map<String, Object> pageVariables = new HashMap<>();
         pageVariables.put("lastLogin", login == null ? "" : login);
-        response.getWriter().println(PageGenerator.instance().getPage("authform.html", pageVariables));
+        String page = PageGenerator.instance().getPage("authform.html", pageVariables);
+        response.getWriter().println(page);
     }
 
     public void doPost(HttpServletRequest request,

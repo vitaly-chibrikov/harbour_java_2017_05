@@ -12,14 +12,17 @@ import javax.servlet.Servlet;
  */
 public class SimpleMain {
     public static void main(String[] args) throws Exception {
-        Servlet frontend = new FrontendServlet();
 
         Server server = new Server(8090);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        server.setHandler(context);
+
+        Servlet frontend = new FrontendServlet();
         context.addServlet(new ServletHolder(frontend), "/*");
+
+        server.setHandler(context);
 
         server.start();
         server.join();
+        System.out.println("Finished");
     }
 }

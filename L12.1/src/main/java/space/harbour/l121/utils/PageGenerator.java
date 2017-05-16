@@ -17,7 +17,7 @@ public class PageGenerator {
     private static final String HTML_DIR = "tml";
     private static PageGenerator instance = new PageGenerator();
 
-    private final Configuration CFG = new Configuration();
+    private final Configuration cfg = new Configuration();
 
     private PageGenerator(){
 
@@ -30,7 +30,7 @@ public class PageGenerator {
     public String getPage(String filename, Map<String, Object> data) {
         Writer stream = new StringWriter();
         try {
-            Template template = CFG.getTemplate(HTML_DIR + File.separator + filename);
+            Template template = cfg.getTemplate(HTML_DIR + File.separator + filename);
             template.process(data, stream);
         } catch (IOException | TemplateException e) {
             e.printStackTrace();

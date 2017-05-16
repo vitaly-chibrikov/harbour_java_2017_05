@@ -15,18 +15,18 @@ import javax.servlet.Servlet;
  */
 public class ResourceMain {
     public static void main(String[] args) throws Exception {
-        Servlet frontend = new FrontendServlet();
 
         Server server = new Server(8090);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+
+        Servlet frontend = new FrontendServlet();
         context.addServlet(new ServletHolder(frontend), "/*");
 
-        ResourceHandler resource_handler = new ResourceHandler();
-        resource_handler.setDirectoriesListed(true);
-        resource_handler.setResourceBase("public_html");
+        ResourceHandler resourceHandler = new ResourceHandler();
+        resourceHandler.setResourceBase("public_html");
 
         HandlerList handlers = new HandlerList();
-        handlers.setHandlers(new Handler[]{resource_handler, context});
+        handlers.setHandlers(new Handler[]{resourceHandler, context});
         server.setHandler(handlers);
 
         server.start();
