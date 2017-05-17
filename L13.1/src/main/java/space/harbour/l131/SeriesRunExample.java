@@ -21,7 +21,7 @@ public class SeriesRunExample extends Thread {
     @Override
     public void run() {
         try {
-            System.out.println("Start space.harbour.l131.run of thread: " + mainId);
+           // System.out.println("Start run of thread: " + mainId);
             synchronized (waitObject) {
                 while (mainId > currentMax) {
                     waitObject.wait();

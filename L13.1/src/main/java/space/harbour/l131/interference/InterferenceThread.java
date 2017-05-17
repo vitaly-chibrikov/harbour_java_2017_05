@@ -1,7 +1,8 @@
 package space.harbour.l131.interference;
 
 public final class InterferenceThread extends Thread {
-    private static int i;
+    private static volatile int i;
+    private static final Object lock = new Object();
 
     public void run() {
         while (CounterSemaphore.instance().isIncrementAndCheck()) {
@@ -10,7 +11,9 @@ public final class InterferenceThread extends Thread {
     }
 
     private void increment() {
-        i++;
+        synchronized (lock) {
+            i++;
+        }
     }
 
     int getI() {

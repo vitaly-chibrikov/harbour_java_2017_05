@@ -20,7 +20,7 @@ public class CounterSemaphore {
     }
 
     public boolean isIncrementAndCheck() {
-        return count.incrementAndGet() < HUNDRED_MILLION;
+        return count.getAndIncrement() < HUNDRED_MILLION;
     }
 
 }
