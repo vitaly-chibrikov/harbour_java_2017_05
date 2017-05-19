@@ -20,7 +20,9 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String... args) throws InterruptedException {
+    @AddLog(message = "Starting the the application")
+    public static void main(String... args) throws Exception {
+
         System.out.println("Starting pid: " + ManagementFactory.getRuntimeMXBean().getName());
 
         int size = 10_000_000;
@@ -29,9 +31,10 @@ public class Main {
         Thread.sleep(10 * 1000);
 
         reFillArray(array);
+
     }
 
-    @AddLog(message = "Starting the loop")
+    //@AddLog(message = "Starting the loop")
     private static void reFillArray(Object[] array) throws InterruptedException {
         int size = array.length;
         int n = 0;
@@ -53,4 +56,8 @@ public class Main {
         System.out.println("Created " + n + " objects");
     }
 
+
+    static class InnerClass {
+        String a = "Hello Java";
+    }
 }

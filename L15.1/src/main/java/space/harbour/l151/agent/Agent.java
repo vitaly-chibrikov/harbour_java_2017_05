@@ -11,6 +11,5 @@ public class Agent {
         System.out.println("Classes loaded: " + instrumentation.getAllLoadedClasses().length);
 
         instrumentation.addTransformer(new MyClassTransformer());
-
     }
 }
